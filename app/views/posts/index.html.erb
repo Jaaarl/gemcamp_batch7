@@ -10,7 +10,9 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.content %></td>
-      <td></td>
+      <td>
+        <%= button_to 'Delete', post_path(post), method: :delete %>
+      </td>
     </tr>
   <% end %>
 </table>
