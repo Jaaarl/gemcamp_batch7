@@ -7,14 +7,15 @@ Rails.application.routes.draw do
   get 'about_us', to: 'welcome#about_us'
   get 'contact', to: 'welcome#contact'
 
-  get 'posts', to: 'posts#index'
-  post 'posts', to: 'posts#create'
-  get 'posts/new', to: 'posts#new'
-  get 'posts/:id', to: 'posts#show'
+  # get 'posts', to: 'posts#index'
+  # post 'posts', to: 'posts#create'
+  # get 'posts/new', to: 'posts#new'
+  # get 'posts/:id', to: 'posts#show'
 
-  get 'posts/:id/edit', to: 'posts#edit'
-  get 'posts/:id', to: 'posts#show', as: 'post'
-  patch 'posts/:id', to: 'posts#update'
-  put 'posts/:id', to: 'posts#update'
-  delete 'posts/:id', to: 'posts#destroy'
+  # get 'posts/:id/edit', to: 'posts#edit'
+  # get 'posts/:id', to: 'posts#show', as: 'post'
+  # patch 'posts/:id', to: 'posts#update'
+  # put 'posts/:id', to: 'posts#update'
+  # delete 'posts/:id', to: 'posts#destroy'
+  resources :posts
 end
