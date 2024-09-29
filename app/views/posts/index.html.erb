@@ -1,6 +1,6 @@
 <h1>Post List</h1>
-
-<table>
+<%= link_to 'New Post', new_post_path, class: 'btn btn-sm btn-success' %>
+<table class = "table table-striped">
   <thead>
   <td>title</td>
   <td>content</td>
@@ -10,11 +10,10 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.content %></td>
-      <td>
+      <td class = "d-flex gap-2">
         <%= button_to 'Delete', post_path(post), method: :delete , class: 'btn btn-sm btn-warning' %>
-        <%= link_to 'edit', edit_post_path(post), class: 'btn btn-sm btn-warning' %>
-        <%= link_to 'show', post_path(post), class: 'btn btn-sm btn-warning' %> 
-        <div>
+        <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-sm btn-warning' %>
+        <%= link_to 'Show', post_path(post), class: 'btn btn-sm btn-warning' %> 
       </td>
     </tr>
   <% end %>
