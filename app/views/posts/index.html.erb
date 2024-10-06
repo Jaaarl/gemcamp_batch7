@@ -14,6 +14,7 @@
         <%= button_to 'Delete', post_path(post), method: :delete , class: 'btn btn-sm btn-warning' %>
         <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-sm btn-warning' %>
         <%= link_to 'Show', post_path(post), class: 'btn btn-sm btn-warning' %> 
+        <%= link_to 'Comments', post_comments_path(post), class: 'btn btn-sm btn-warning'  %>
       </td>
     </tr>
   <% end %>
